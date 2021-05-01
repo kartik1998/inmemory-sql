@@ -1,7 +1,6 @@
-import Table from './sql/table';
+import SQL from './sql/sql';
 
-const table = new Table('user', { name: 'string', age: 'int' });
-table.insert({ name: 'Kartik ', age: 12 });
-table.insert({ name: 'rama', age: 1024 });
+SQL.createTable('user', { name: 'string', age: 'int' });
+SQL.deleteTable('user');
 
-console.log(table.getRecords({ name: 'ramasank' }));
+console.log(SQL);

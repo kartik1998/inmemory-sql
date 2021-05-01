@@ -7,7 +7,9 @@ export default class Table {
     this.verifyParams(params);
     this.schema = params;
   }
-
+  public getName(): string {
+    return this.name;
+  }
   private verifyParams(params): boolean {
     if (Object.keys(params).length < 1)
       throw new Error('Table should have atlease one column');
