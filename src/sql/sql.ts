@@ -18,12 +18,22 @@ export default class SQL {
   }
 
   public static deleteTable(name): void {
-      const tables: any = [];
-      this.tables.forEach(table => {
-          if(table.getName() !== name) {
-              tables.push(table);
-          }
-      })
-      this.tables = tables;
+    const tables: any = [];
+    this.tables.forEach((table) => {
+      if (table.getName() !== name) {
+        tables.push(table);
+      }
+    });
+    this.tables = tables;
+  }
+
+  public static getTable(name) {
+    let tb: any = {};
+    this.tables.forEach((table) => {
+      if (table.getName() === name) {
+        tb = table;
+      }
+    });
+    return tb;
   }
 }
