@@ -9,4 +9,4 @@ const table_1 = __importDefault(require('./sql/table'));
 const table = new table_1.default('user', { name: 'string', age: 'int' });
 table.insert({ name: 'Kartik ', age: 12 });
 table.insert({ name: 'rama', age: 1024 });
-console.log(table);
+console.log(table.getRecords({ name: 'ramasank' }));

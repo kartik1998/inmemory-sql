@@ -48,5 +48,21 @@ class Table {
     this.verifyInput(input);
     this.table.push(input);
   }
+  printRecords() {
+    console.log(this.table);
+  }
+  getRecords(param) {
+    if (Object.keys(param).length !== 1)
+      throw new Error('Only one key allowed for searching');
+    if (!Object.keys(this.schema).includes(Object.keys(param)[0]))
+      throw new Error('Invalid key passed in param');
+    const out = [];
+    this.table.forEach((record) => {
+      if (record[Object.keys(param)[0]] === Object.values(param)[0]) {
+        out.push(record);
+      }
+    });
+    return out;
+  }
 }
 exports.default = Table;
