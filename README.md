@@ -1,7 +1,8 @@
-### The objective is to design and implement an in-memory SQL-like database, which should support the following set of operations / functionality:
+<blockquote>The objective is to design and implement an in-memory SQL-like database, which should support the following set of operations: </blockquote>
 
-It should be possible to
+**It should be possible to**: 
 
+```
 - create or delete tables in a database.
 - A table definition comprises columns which have types. They can also have constraints
 - The supported column types are string and int.
@@ -11,3 +12,4 @@ It should be possible to
 - It should be possible to insert records in a table.
 - It should be possible to print all records in a table.
 - It should be possible to filter and display records whose column values match a given value.
+```
